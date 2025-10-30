@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pushkar Bike Rent - Premium Bike & Car Rentals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ------------NAV------------- -->
+    <header>
+      <nav>
+        <div class="Poppins logo"><h1>Pushkar Bike Rent</h1></div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li><a href="#cars" onclick="closeMenu()">Vehicles</a></li>
+          <li><a href="#features" onclick="closeMenu()">Features</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="lobster-regular">Pushkar Bike Rent</h1>
+        <p class="Poppins">
+          Premium bikes and cars at unbeatable prices. Book now and hit the
+          road!
+        </p>
+        <button
+          onclick="window.open('https://wa.me/7742714055', '_blank')"
+          class="cta-button"
+          onclick="document.querySelector('.search-bar').scrollIntoView({behavior: 'smooth'})"
+        >
+          <i class="fa-brands fa-whatsapp" style="font-size: 22px"></i>&nbsp
+          Contact Us
+        </button>
+      </div>
+    </section>
+
+    <!-- ------BIKE SECTION------- -->
+    <section class="section" id="cars">
+      <h2 class="section-title">Our Premium Fleet</h2>
+      <div class="cars-grid">
+        <div class="car-card">
+          <div class="car-image">
+            <img src="images/img1.jpg" alt="Royal Enfield Classic" />
+          </div>
+          <div class="car-details">
+            <h3 class="car-name">TVS iQube</h3>
+            <p class="car-type">Scooter</p>
+            <div class="car-specs">
+              <span class="spec">⚡ Electric</span>
+              <span class="spec">👥 2 Seats</span>
+              <span class="spec">⚙️ Automatic</span>
+            </div>
+            <div class="price">
+              ₹800<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button
+              class="rent-button"
+              onclick="rentCar('Royal Enfield Classic')"
+            >
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">🏍️</div>
+          <div class="car-details">
+            <h3 class="car-name">KTM Duke 390</h3>
+            <p class="car-type">Sport Bike</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">👥 2 Seats</span>
+              <span class="spec">⚙️ Manual</span>
+            </div>
+            <div class="price">
+              ₹1200<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('KTM Duke 390')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">🛵</div>
+          <div class="car-details">
+            <h3 class="car-name">Honda Activa</h3>
+            <p class="car-type">Scooter</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">👥 2 Seats</span>
+              <span class="spec">🤖 Auto</span>
+            </div>
+            <div class="price">
+              ₹400<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('Honda Activa')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">🚗</div>
+          <div class="car-details">
+            <h3 class="car-name">Maruti Swift</h3>
+            <p class="car-type">Hatchback</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">👥 5 Seats</span>
+              <span class="spec">⚙️ Manual</span>
+            </div>
+            <div class="price">
+              ₹1500<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('Maruti Swift')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">🚙</div>
+          <div class="car-details">
+            <h3 class="car-name">Mahindra Thar</h3>
+            <p class="car-type">SUV</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Diesel</span>
+              <span class="spec">👥 4 Seats</span>
+              <span class="spec">⚙️ Manual</span>
+            </div>
+            <div class="price">
+              ₹3500<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('Mahindra Thar')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-image">🚗</div>
+          <div class="car-details">
+            <h3 class="car-name">Hyundai i20</h3>
+            <p class="car-type">Premium Hatchback</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">👥 5 Seats</span>
+              <span class="spec">🤖 Auto</span>
+            </div>
+            <div class="price">
+              ₹2000<span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('Hyundai i20')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="features" id="features">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3 class="feature-title">Best Prices</h3>
+          <p class="feature-desc">
+            Competitive rates with no hidden fees. What you see is what you pay.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">Fully Insured</h3>
+          <p class="feature-desc">
+            Comprehensive insurance coverage on all our vehicles for your peace
+            of mind.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Instant Booking</h3>
+          <p class="feature-desc">
+            Book your vehicle in seconds with our streamlined reservation
+            system.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛠️</div>
+          <h3 class="feature-title">Well Maintained</h3>
+          <p class="feature-desc">
+            All vehicles are regularly serviced and maintained to ensure your
+            safety.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎧</div>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-desc">
+            Round-the-clock customer support to assist you during your journey.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h3 class="feature-title">Flexible Rental</h3>
+          <p class="feature-desc">
+            Hourly, daily, or weekly rentals available to suit your travel
+            plans.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section" id="reviews">
+      <div class="reviews-container">
+        <h2 class="section-title">What Our Customers Say</h2>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">A</div>
+                <div>
+                  <h4 class="reviewer-name">Amit Sharma</h4>
+                  <p class="review-date">2 weeks ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Excellent service! Rented a Royal Enfield for 3 days. The bike
+              was in perfect condition and the staff was very helpful. Highly
+              recommended for Pushkar exploration!”
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">P</div>
+                <div>
+                  <h4 class="reviewer-name">Priya Verma</h4>
+                  <p class="review-date">1 month ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Best bike rental experience! Got a Honda Activa for local
+              sightseeing. Fair pricing, clean vehicle, and quick booking
+              process. Will definitely rent again!”
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">R</div>
+                <div>
+                  <h4 class="reviewer-name">Rahul Mehra</h4>
+                  <p class="review-date">1 month ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Rented the Mahindra Thar for a desert safari. Amazing experience!
+              The vehicle was well-maintained and the 24/7 support was really
+              helpful when I had questions.”
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">S</div>
+                <div>
+                  <h4 class="reviewer-name">Sneha Patel</h4>
+                  <p class="review-date">2 months ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Great selection of vehicles and competitive prices. Rented a KTM
+              Duke for a weekend trip. Only minor delay at pickup, but overall
+              very satisfied with the service.”
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">V</div>
+                <div>
+                  <h4 class="reviewer-name">Vikram Singh</h4>
+                  <p class="review-date">2 months ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Professional service and transparent pricing. No hidden charges!
+              The Swift was perfect for my family trip. The team went above and
+              beyond to ensure everything was smooth.”
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-info">
+                <div class="reviewer-avatar">M</div>
+                <div>
+                  <h4 class="reviewer-name">Meera Joshi</h4>
+                  <p class="review-date">3 months ago</p>
+                </div>
+              </div>
+              <div class="rating">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-text">
+              “Five stars! Smooth booking, excellent bike condition, and
+              hassle-free return. The location near Pushkar Lake is very
+              convenient. Thank you for making our trip memorable!”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Pushkar Bike Rent</h3>
+          <p>
+            Your trusted partner for premium bike and car rentals in Pushkar.
+            Experience the freedom of exploring Rajasthan at your own pace.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cars">Our Fleet</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Bike Rentals</a></li>
+            <li><a href="#">Car Rentals</a></li>
+            <li><a href="#">Long-term Rentals</a></li>
+            <li><a href="#">Airport Pickup</a></li>
+            <li><a href="#">Guided Tours</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="contact-info">
+            <li>📍 Near Pushkar Lake, Pushkar, Rajasthan 305022, India</li>
+            <li>📞 <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li>
+              📧
+              <a href="mailto:info@pushkarbikerent.com"
+                >info@pushkarbikerent.com</a
+              >
+            </li>
+            <li>⏰ Open Daily: 7:00 AM - 9:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Popular Destinations</h3>
+          <ul class="footer-links">
+            <li><a href="#">Pushkar Lake</a></li>
+            <li><a href="#">Brahma Temple</a></li>
+            <li><a href="#">Savitri Temple</a></li>
+            <li><a href="#">Ajmer Sharif</a></li>
+            <li><a href="#">Sand Dunes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Insurance Info</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pushkar Bike Rent. All rights reserved.</p>
+        <p>Designed with ❤️ for travelers | Licensed & Insured</p>
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        const menuToggle = document.querySelector(".menu-toggle");
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        const navLinks = document.getElementById("navLinks");
+        const menuToggle = document.querySelector(".menu-toggle");
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("active");
+      }
+
+      function searchCars() {
+        const pickup = document.getElementById("pickup").value;
+        const dropoff = document.getElementById("dropoff").value;
+        const pickupDate = document.getElementById("pickupDate").value;
+        const dropoffDate = document.getElementById("dropoffDate").value;
+
+        if (pickup && dropoff && pickupDate && dropoffDate) {
+          alert(
+            `Searching vehicles from ${pickup} to ${dropoff}\nFrom: ${pickupDate}\nTo: ${dropoffDate}`
+          );
+          document
+            .getElementById("cars")
+            .scrollIntoView({ behavior: "smooth" });
+        } else {
+          alert("Please fill in all search fields");
+        }
+      }
+
+      function rentCar(vehicleName) {
+        alert(
+          `Great choice! You're booking the ${vehicleName}.\n\nContact us at +91 98765 43210 to complete your booking.`
+        );
+      }
+
+      // Set min date for date inputs to today
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("pickupDate").min = today;
+      document.getElementById("dropoffDate").min = today;
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const nav = document.querySelector("nav");
+        const navLinks = document.getElementById("navLinks");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        if (
+          !nav.contains(event.target) &&
+          navLinks.classList.contains("active")
+        ) {
+          navLinks.classList.remove("active");
+          menuToggle.classList.remove("active");
+        }
+      });
+
+      // Smooth header on scroll
+      let lastScroll = 0;
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          header.style.padding = "1rem 5%";
+        } else {
+          header.style.padding = "1.5rem 5%";
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+  </body>
+</html>
