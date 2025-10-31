@@ -214,23 +214,103 @@
               <span class="spec">🔥 100CC</span>
               <span class="spec">⚙️ Automatic</span>
             </div>
-            <div class="price">
+            <div
+              class="price"
+              style="display: flex; align-items: baseline; gap: 6px"
+            >
               <span
                 style="
                   text-decoration: line-through;
                   color: #888;
-                  font-size: 1.2rem;
-                  margin-right: 10px;
+                  font-size: 1.1rem;
                 "
                 >₹500</span
-              >₹300<span style="font-size: 1rem; color: #888">/day</span>
+              >
+              <span style="font-size: 1.4rem; font-weight: bold; color: #27ae60"
+                >₹300</span
+              >
+              <span style="font-size: 1rem; color: #888">/day</span>
             </div>
-            <button class="rent-button" onclick="rentCar('Hyundai i20')">
+            <button class="rent-button" onclick="rentCar('TVS XL')">
               Rent Now
             </button>
           </div>
         </div>
+
+        <div class="car-card hidden-card">
+          <div class="car-image"><img src="images/shine.jpg" alt="Shine" /></div>
+          <div class="car-details">
+            <h3 class="car-name">Honda Shine</h3>
+            <p class="car-type">Commuter Motercycle</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">🔥 125CC</span>
+              <span class="spec">⚙️ Manual</span>
+            </div>
+            <div
+              class="price"
+              style="display: flex; align-items: baseline; gap: 6px"
+            >
+              <span
+                style="
+                  text-decoration: line-through;
+                  color: #888;
+                  font-size: 1.1rem;
+                "
+                >₹500</span
+              >
+              <span style="font-size: 1.4rem; font-weight: bold; color: #27ae60"
+                >₹400</span
+              >
+              <span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('TVS XL')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+
+        <div class="car-card hidden-card">
+          <div class="car-image"><img src="images/activaa.jpg" alt="XL" /></div>
+          <div class="car-details">
+            <h3 class="car-name">Honda Activa</h3>
+            <p class="car-type">Scooter</p>
+            <div class="car-specs">
+              <span class="spec">⛽ Petrol</span>
+              <span class="spec">🔥 Scooter</span>
+              <span class="spec">⚙️ Automatic</span>
+            </div>
+            <div
+              class="price"
+              style="display: flex; align-items: baseline; gap: 6px"
+            >
+              <span
+                style="
+                  text-decoration: line-through;
+                  color: #888;
+                  font-size: 1.1rem;
+                "
+                >₹500</span
+              >
+              <span style="font-size: 1.4rem; font-weight: bold; color: #27ae60"
+                >₹400</span
+              >
+              <span style="font-size: 1rem; color: #888">/day</span>
+            </div>
+            <button class="rent-button" onclick="rentCar('TVS XL')">
+              Rent Now
+            </button>
+          </div>
+        </div>
+        </div>
       </div>
+      <div style="text-align: center; margin-top: 30px">
+      <button class="toggle-button" onclick="toggleHiddenCars()">
+        <span id="toggleText">Show More</span>
+        <span id="toggleArrow" style="margin-left: 10px; font-size: 1.2rem"
+          >▼</span
+        >
+      </button>
     </section>
 
     <!-- WHY US -->
@@ -562,6 +642,36 @@
 
         lastScroll = currentScroll;
       });
+
+      // ARROW----------------------
+      function toggleHiddenCars() {
+        // Select all elements with class 'hidden-card'
+        const hiddenCards = document.querySelectorAll(".hidden-card");
+
+        // Get the text and arrow elements by their IDs
+        const toggleText = document.getElementById("toggleText");
+        const toggleArrow = document.getElementById("toggleArrow");
+
+        // Loop through each hidden card
+        hiddenCards.forEach((card) => {
+          // Check if card is currently hidden (display is 'none' or empty)
+          if (card.style.display === "none" || card.style.display === "") {
+            // Show the card
+            card.style.display = "block";
+            // Update button text to "Show Less"
+            toggleText.textContent = "Show Less";
+            // Change arrow to point up
+            toggleArrow.textContent = "▲";
+          } else {
+            // Hide the card
+            card.style.display = "none";
+            // Update button text to "Show More"
+            toggleText.textContent = "Show More";
+            // Change arrow to point down
+            toggleArrow.textContent = "▼";
+          }
+        });
+      }
     </script>
   </body>
 </html>

@@ -298,6 +298,10 @@ nav {
   overflow: hidden;
 }
 
+.hidden-card {
+  display: none;
+}
+
 .car-image img {
   width: 100%;
   height: 100%;
