@@ -294,11 +294,8 @@ nav {
   height: 250px;
   border-radius: 15px;
   position: relative;
-  /* height: auto; */
   padding: 10%;
   overflow: hidden;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 .car-image img {
@@ -722,7 +719,7 @@ footer {
   }
 
   .car-image {
-    height: 200px;
+    height: 220px;
     font-size: 3rem;
   }
 
