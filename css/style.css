@@ -25,12 +25,40 @@
   box-sizing: border-box;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* for Firefox */
+  scrollbar-color: #555 transparent; /* thumb, track */
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
   background: var(--background);
   color: var(--text-dark);
 }
+
+/* For Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* hides background track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #555; /* dark grey */
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #666; /* lighter on hover */
+}
+
 
 /* -----------------HEADER---------------- */
 header {
@@ -361,6 +389,22 @@ nav {
 }
 
 .rent-button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.toggle-button{
+  padding: 0.8rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border: none;
+  border-radius: 10px;
+  color: var(--text-light);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-button:hover {
   opacity: 0.9;
   transform: scale(1.02);
 }
@@ -730,11 +774,6 @@ footer {
   .feature-icon {
     font-size: 2.5rem;
   }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Loading animation */
